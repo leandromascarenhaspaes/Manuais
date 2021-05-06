@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* fr means fraction */
+    grid-template-rows: .2fr .5fr 1fr .5fr;
+    grid-template-areas: 
+        "navbar navbar navbar navbar"
+        "sidebar1 banner1 banner1 sidebar2"
+        "sidebar1 list list sidebar2"
+        "sidebar1 banner2 banner2 sidebar2";
+    grid-column-gap: 0.2rem;
+    grid-row-gap: 0.2rem;
+}
+
+/* Menu */
+.navbar {
+    grid-area: navbar;
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+}
+
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: gray;
+    margin: 0 10px;
+}
+
+.menu a img {
+    height: 50px;
+    width: 133px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(169, 169, 169, 0.671);
+    float: left;
+}
+
+span {
+    color: #ffffff;
+    background-color: rgb(0, 255, 115);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+
+#toggle {
+    display: none;
+}
+
+/* Content */
+
+.container2 {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* fr means fraction */
+    grid-template-rows: .8fr 2fr .8fr;
+    grid-template-areas: 
+        "sidebar3 banner3 banner3 sidebar4"
+        "sidebar3 list1 list1 sidebar4"
+        "sidebar3 banner4 banner4 sidebar4";
+    grid-column-gap: 0.2rem;
+    grid-row-gap: 0.2rem;
+}
+
+.sidebar1 {
+    grid-area: sidebar1;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+.banner1 {
+    grid-area: banner1;
+    border: 1px solid rgb(223, 223, 223);
+}
+.list {
+    grid-area: list;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+.list li, a {
+    text-decoration: none;
+    list-style-type: none;
+    overflow: hidden;
+    word-wrap: break-word
+}
+
+.banner2 {
+    grid-area: banner2;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+.sidebar2 {
+    grid-area: sidebar2;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+/* list2 */
+
+.sidebar3 {
+    grid-area: sidebar3;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+.banner3 {
+    grid-area: banner3;
+    border: 1px solid rgb(223, 223, 223);
+}
+.list1 {
+    grid-area: list1;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+.list1 li, a {
+    text-decoration: none;
+    list-style-type: none;
+    overflow: hidden;
+    word-wrap: break-word
+}
+
+.banner4 {
+    grid-area: banner4;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+.sidebar4 {
+    grid-area: sidebar4;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+.donation {
+    background-color: rgb(223, 223, 223);
+    text-align: center;
+}
+
+.donation h1 {
+    font-size: 30px;
+    color: red;
+    padding: 10px 0;
+}
+
+.donation h3 {
+    font-weight: 900;
+    padding: 0 10px;
+}
+
+button {
+    margin: 20px;
+    font-family: 'Itim', cursive;
+    padding: 8px 25px;
+    font-size: 25px;
+    background-color: rgb(0, 255, 115);
+    border-radius: 20px;
+    cursor: pointer;
+    border-style: none;
+    transition: .5s ease;
+}
+
+button:hover {
+    background-color: rgb(0, 136, 61);
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Footert */
+.footer {
+    height: 12vh;
+    display: flex;
+    clear: both;
+    font-size: 14px;
+    font-weight: 900;
+    align-items: center;
+    vertical-align: middle;
+    justify-content:center;
+    background: linear-gradient(0deg, rgb(82, 82, 82) 0%, rgba(115,115,115,1) 60%, rgb(138, 138, 138) 99%);;
+    color: #fff;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:698px) {
+    .menu span {
+        display: none;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr .5fr 1.4fr 1.4fr .5fr;
+        grid-template-areas: 
+        "navbar"
+        "banner1"
+        "list"
+        "list"
+        "banner2";
+    }
+
+    .sidebar1 {
+        display: none;
+    }
+
+    .sidebar2 {
+        display: none;
+    }
+
+    .container2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 1.4fr 1.4fr .5fr;
+        grid-template-areas: 
+        "banner3"
+        "list1"
+        "list1"
+        "banner4";
+    }
+
+    .sidebar3 {
+        display: none;
+    }
+
+    .sidebar4 {
+        display: none;
+    }
+
+    .list li, .list1 li {
+        padding: 5px 10px;
+    }
+
+    .list a, .list1 a {
+        font-size: 14px;
+    }
+}
